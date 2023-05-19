@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <title>{% block title %}{% endblock %}</title>
     <style>
         /* Sticky menu styles */
@@ -41,8 +42,10 @@
 <body>
     <div class="sticky">
         {% if user.is_authenticated %}
+            <a href="{% url 'authentication:home' %}">Home</a>
             <a href="{% url 'authentication:logout' %}">Logout</a>
         {% else %}
+            <a href="{% url 'authentication:home' %}">Home</a>
             <a href="{% url 'authentication:login' %}">Login</a>
             <a href="{% url 'authentication:signup' %}">Signup</a>
         {% endif %}

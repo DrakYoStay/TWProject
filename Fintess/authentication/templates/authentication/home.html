@@ -42,7 +42,7 @@
     {% if user.is_authenticated %}
         <div class="container">
             <div class="column">
-                <a href="#" class="button"><h1>Welcome, {{ user.username }}!</h1></a>
+                <a href="{% url 'authentication:weight_track' %}" class="button"><h1>Welcome, {{ user.username }}!</h1></a>
             </div>
         
             <div class="column">
