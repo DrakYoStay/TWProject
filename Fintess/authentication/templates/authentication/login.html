@@ -1,0 +1,42 @@
+{% extends 'authentication/base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+<style>
+    .center{
+        top: 50%;
+        left: 50%;
+        width: 30em;
+        height: 30em;
+        margin-top: -9em;
+        margin-left: -15em;
+        border: 1px solid #666;
+        background-color: #8b0505;
+        position: fixed;
+    }
+    .form {
+            padding: 50px;
+            text-align: center;
+    }
+</style>
+<div class="center">
+    <div class="form">
+    <h1>Login</h1>
+    <form method="POST" action="{% url 'authentication:login' %}">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <p></p>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label>
+        <p></p>
+        <input type="password" id="password" name="password" required><br>
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="{% url 'authentication:signup' %}">Signup</a></p>
+    </div>
+</div>
+{% endblock %}
+</html>
