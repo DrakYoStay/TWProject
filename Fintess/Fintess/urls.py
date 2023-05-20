@@ -1,5 +1,5 @@
 """
-URL configuration for Fintess project.
+URL configuration for fintess project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -14,9 +14,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import include, path
+from django.contrib import admin
+from django.urls import include,path
+from fintess_app import views
 
 urlpatterns = [
-    # Other URL patterns
-    path('', include('authentication.urls')),
+    path('', include('fintess_app.urls')),
+    path('login/', views.login_view, name='login'),
 ]

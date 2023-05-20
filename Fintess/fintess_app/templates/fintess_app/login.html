@@ -1,0 +1,36 @@
+{% extends 'fintess_app/base.html' %}
+
+{% block title %}
+    login
+{% endblock %}
+
+{% block content %}
+<div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
+<div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
+<div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
+<div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
+<div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
+<div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
+<div class="h-100 d-flex justify-content-center">
+    <span class="badge badge-light">
+        <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="form-group">
+        <label for="username input-lg">Username:</label>
+        <input type="text" class="form-control input-lg" id="username" name="username" placeholder="Username"><br>
+        </div>
+        <div class="form-group">
+        <label for="password input-lg">Password:</label>
+        <input type="password" class="form-control input-lg" id="password" name="password" placeholder="Password"><br>
+        <a href="{% url 'fintess_app:home' %}">
+        <div class="form-group">
+        <a href="{% url 'fintess_app:sign_up' %}">Sign Up Here</a>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+</span>
+
+</div>
+
+
+{% endblock %}

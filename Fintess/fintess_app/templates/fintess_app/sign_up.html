@@ -1,0 +1,23 @@
+{% extends 'fintess_app/base.html' %}
+
+{% block title %}
+    sign_up
+{% endblock %}
+
+{% block content %}
+<div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
+<div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
+<div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
+<div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
+<div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
+<div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
+<div class="d-flex justify-content-center flex-nowrap">
+    <span class="badge badge-light">
+    <form method="POST" action="{% url 'fintess_app:sign_up' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Signup</button>
+    </form>
+    </span>
+</div>
+{% endblock %}
