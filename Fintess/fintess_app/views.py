@@ -61,3 +61,9 @@ def profile_view(request):
     }
 
     return render(request, 'fintess_app/profile.html', context)
+
+def food_diary_view(request):
+    return render(request, 'fintess_app/food_diary.html')
+
+def exercises_view(request):
+    return render(request, 'fintess_app/exercises.html')

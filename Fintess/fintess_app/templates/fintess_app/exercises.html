@@ -1,0 +1,82 @@
+{% extends 'fintess_app/base.html' %}
+
+{% block title %}
+    Exercises
+{% endblock %}
+
+
+{% block content%}
+
+<div class="container">
+    <div class="row" style="height:40px;">&nbsp;</div>
+    {% if user.is_authenticated %}
+    <div class="row">
+        <div class='col-sm d-flex justify-content-center bg-info'>
+            <h1>Welcome to your exercise routine, {{ user.username }}.</h1>
+        </div>
+    </div>
+    {% else %}
+    <div class="row">
+        <div class='col-sm d-flex justify-content-center bg-info'>
+            <h1>Our offer!</h1>
+        </div>
+    </div>
+    {% endif %}
+    <div class="row" style="height:40px;">&nbsp;</div>
+    <div class="row">
+        <div class='col-md'>
+            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum orci et augue efficitur euismod. Vivamus eget elementum lacus. Maecenas elit nunc, laoreet at bibendum id, laoreet at velit. Integer ante quam, pellentesque non nisl vitae, lacinia tempus diam. Aenean suscipit quam nec quam lacinia, vel vulputate lectus molestie. Quisque pulvinar eros in maximus tempor. Suspendisse laoreet dui sit amet eros cursus, eu venenatis lorem efficitur. Aenean eget porta est. Donec ut justo ut libero interdum euismod. Mauris lorem dui, malesuada eu imperdiet non, egestas nec orci.</h5>
+        </div>
+    </div>
+    <div class="row" style="height:40px;">&nbsp;</div>
+    <div class="row">
+        <div class='col-sm bg-secondary'>
+            <h2>Section for squatting</h2>
+        </div>
+    </div>
+    <div class="row" style="height:40px;">&nbsp;</div>
+    <div class="row">
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gcNh17Ckjgg" allowfullscreen></iframe></div></div>
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bEv6CCg2BC8" allowfullscreen></iframe></div></div>
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ubdIGnX2Hfs" allowfullscreen></iframe></div></div>
+    </div>
+    <div class="row" style="height:100px;">&nbsp;</div>
+    <div class="row">
+        <div class='col-sm bg-secondary'>
+            <h2>Section for push-ups</h2>
+        </div>
+    </div>
+    <div class="row" style="height:40px;">&nbsp;</div>
+    <div class="row">
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/JyCG_5l3XLk" allowfullscreen></iframe></div></div>
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Z88Rl5bpnmI" allowfullscreen></iframe></div></div>
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zkU6Ok44_CI" allowfullscreen></iframe></div></div>
+    </div>
+    <div class="row" style="height:100px;">&nbsp;</div>
+    <div class="row">
+        <div class='col-sm bg-secondary'>
+            <h2>Section for lunges</h2>
+        </div>
+    </div>
+    <div class="row" style="height:40px;">&nbsp;</div>
+    <div class="row">
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wrwwXE_x-pQ" allowfullscreen></iframe></div></div>
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7SMzPn4LGjQ" allowfullscreen></iframe></div></div>
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/i7zuyYcUwHI" allowfullscreen></iframe></div></div>
+    </div>
+    <div class="row" style="height:100px;">&nbsp;</div>
+    <div class="row">
+        <div class='col-sm bg-secondary'>
+            <h2>Section for burpees</h2>
+        </div>
+    </div>
+    <div class="row" style="height:40px;">&nbsp;</div>
+    <div class="row gy-5">
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/r6MBg8-FlD4" allowfullscreen></iframe></div></div>
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WRIwH59a4Uw" allowfullscreen></iframe></div></div>
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qLBImHhCXSw" allowfullscreen></iframe></div></div>
+    </div>
+    </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'fintess_app/base.html' %}
+
+{% block title %}
+    Food diary
+{% endblock %}
+
+
+{% block content%}
+
+<div class="container">
+    <div class="row" style="height:40px;">&nbsp;</div>
+    {% if user.is_authenticated %}
+    <div class="row">
+        <div class='col-sm d-flex justify-content-center bg-info'>
+            <h1>Welcome to your food diary, {{ user.username }}.</h1>
+        </div>
+    </div>
+    {% else %}
+    <div class="row">
+        <div class='col-sm d-flex justify-content-center bg-info'>
+            <h1>What do we offer!</h1>
+        </div>
+    </div>
+    {% endif %}
+    <div class="row" style="height:40px;">&nbsp;</div>
+    <div class="row">
+        <div class='col-md'>
+            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum orci et augue efficitur euismod. Vivamus eget elementum lacus. Maecenas elit nunc, laoreet at bibendum id, laoreet at velit. Integer ante quam, pellentesque non nisl vitae, lacinia tempus diam. Aenean suscipit quam nec quam lacinia, vel vulputate lectus molestie. Quisque pulvinar eros in maximus tempor. Suspendisse laoreet dui sit amet eros cursus, eu venenatis lorem efficitur. Aenean eget porta est. Donec ut justo ut libero interdum euismod. Mauris lorem dui, malesuada eu imperdiet non, egestas nec orci.</h5>
+        </div>
+    </div>
+    <div class="row" style="height:40px;">&nbsp;</div>
+    <div class="row">
+        <div class='col-sm bg-secondary'>
+            <h2>Section for weight loss</h2>
+        </div>
+    </div>
+    <div class="row" style="height:40px;">&nbsp;</div>
+    <div class="row">
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LCyECbA3pUw" allowfullscreen></iframe></div></div>
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/I4DbxaN033k" allowfullscreen></iframe></div></div>
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LuBagc7uk-k" allowfullscreen></iframe></div></div>
+    </div>
+    <div class="row" style="height:100px;">&nbsp;</div>
+    <div class="row">
+        <div class='col-sm bg-secondary'>
+            <h2>Section for weight gain</h2>
+        </div>
+    </div>
+    <div class="row" style="height:40px;">&nbsp;</div>
+    <div class="row">
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_8YDBi7k2eg" allowfullscreen></iframe></div></div>
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RIJ2Jclv9Dg" allowfullscreen></iframe></div></div>
+        <div class='col-md'><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Q2JXaKPxYDs" allowfullscreen></iframe></div></div>
+    </div>
+    </div>
+</div>
+</div>
+{% endblock %}

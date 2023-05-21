@@ -8,38 +8,32 @@
 <style>
     canvas {
         width: 600px;
-        height: 400px;
+        height: 700px;
         border: 1px solid #ccc;
     }
 </style>
-<div class="container-fluid">
+<div class="container">
 <div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
 <h1>Your height/day graph: </h1>
           <p></p>
           <h7>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin cursus magna non ligula ullamcorper hendrerit. Nullam justo nisi, bibendum sed malesuada at, pretium id tortor. Mauris interdum mollis purus ut gravida. Integer felis lectus, placerat id ex vitae, varius convallis turpis. Donec mi risus, blandit vitae risus sit amet, dictum gravida ipsum. Nulla facilisi. Aenean consectetur magna et felis varius lobortis. Nunc placerat molestie dictum.
 
             Duis ullamcorper maximus tempor. Morbi et lacus nulla. Morbi mattis libero leo, sagittis bibendum dolor malesuada eget. Maecenas in condimentum nibh. Aliquam erat volutpat. Pellentesque quis enim sed sapien gravida imperdiet. Morbi posuere vulputate pellentesque. Integer viverra enim vitae ligula interdum laoreet. Sed tincidunt placerat convallis. Proin eu pulvinar augue. Nulla magna lectus, mollis id ante congue, pretium blandit dui. Etiam eu sodales odio. Fusce eget ex quis ex condimentum fringilla. Praesent hendrerit est eget elit convallis, quis elementum eros viverra. Proin ac odio vestibulum lectus aliquet iaculis. In hac habitasse platea dictumst.</h7>
-        </div>
 <div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
 <div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
 <div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
 <div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
-<div class="d-flex justify-content-center flex-nowrap">
+<div class="d-flex justify-content-center">
     <div class="row">
-        <div class="col">
-            <div>
+        <div class="col-md-4">
                 <form method="POST" action="{% url 'fintess_app:profile' %}">
                     {% csrf_token %}
                     {{ form.as_p }}
                     <button type="submit" class="btn btn-primary">Add new weight</button>
                 </form>
-            </div>
         </div>
-        <div class="col">
-            <div>
-                <canvas id="myChart"></canvas>
-            </div>
-
+        <div class="col-md-8">
+            <canvas id="myChart"></canvas>
             <script>
                 // Get the dates and values from the Django view
                 var dates = JSON.parse('{{ dates|safe }}');
@@ -72,7 +66,7 @@
                 });
             </script>
         </div>
-</div>
+    </div>
 </div>
 
 {% endblock %}
